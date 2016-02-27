@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charse="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">My Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/i18next.min.js"></script>
+    <script type="text/javascript" src="js/lang.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <header class="lang blur">
+        <button type="button" class="btn btn-default btn-main pull-right lang" data-lang="en">English</button>
+        <button type="button" class="btn btn-default btn-main pull-right lang" data-lang="tw" active>正體中文</button>
+    </header>
+    <main class="container">
+        <div class="row blur">
+            <div class="col-sm-6">
+                <img class="title-logo"  src="img/duck.gif" alt="logo" rel='tooltip'  >
+                <!-- data-i18n="[title]titleTrans.fun" not working  0rz -->
+            </div>
+            <div class="col-sm-6  text-right text-uppercase">
+                <h1 class="text-thin title-super" data-i18n="name">Rex Huang</h1>
+                <h3 class="text-muted" data-i18n="job">Front-end Ninja</h3>
+            </div>
+        </div>
+        <div class="row blur">
+            <div class="col-sm-12">
+                <hr>
+                <img class="img-responsive" src="img/Cat01.jpg" alt="喵星人要統治地球">
+            </div>
+        </div>
+        <div class="row blur">
+            <div class="col-sm-12">
+                <h2 data-i18n="ProjectsTitle.title"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 blur">
+                <img src="img/Cat02.jpg" class="img-responsive href" data-toggle="modal" data-target="#project1">
+                <h3 data-i18n="projects.0.title"></h3>
+                <p>
+                    <a href="http://140.115.236.72/demo-personal/YD802/web/C1400155/NewLeopardCAT/" data-i18n="projects.0.href"></a>
+                </p>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="projects.0.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-responsive" src="img/LeopardCat.png">
+                            <p data-i18n="projects.0.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 blur">
+                <img src="img/leaf.jpg" class="img-responsive href" data-toggle="modal" data-target="#project2">
+                <h3 data-i18n="projects.1.title"></h3>
+                <p>
+                    <a href="http://140.115.236.72/demo-projects/YD802/YD802G2/Letgo/front/mainPage.php" data-i18n="projects.1.href"></a>
+                </p>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="projects.1.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-responsive" src="img/JPtravel.png">
+                            <p data-i18n="projects.1.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 blur">
+                <img src="img/Cat03.jpg" class="img-responsive href" data-toggle="modal" data-target="#project3">
+                <h3 data-i18n="projects.2.title"></h3>
+                <p>
+                    <a href="http://github.com/gowaa13" data-i18n="projects.2.href"></a>
+                </p>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="projects.2.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-responsive" src="img/github.png">
+                            <p data-i18n="projects.2.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row blur">
+            <div class="col-sm-12">
+                <h2 data-i18n="ProjectsTitle.online"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 blur">
+                <img src="img/sports.jpg" class="img-responsive href" data-toggle="modal" data-target="#project4">
+                <h3 data-i18n="projects.3.title"></h3>
+                <p>
+                    <a href="https://www.codecademy.com/Coder0305" data-i18n="projects.3.href"></a>
+                </p>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="project4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="projects.3.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-responsive" src="img/CodecademyIng.png">
+                            <p data-i18n="projects.3.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 blur">
+                <img src="img/freeCodeCamp.png" class="img-responsive href" data-toggle="modal" data-target="#project5">
+                <h3 data-i18n="projects.4.title"></h3>
+                <p>
+                    <a href="http://www.freecodecamp.com/gowaa13" data-i18n="projects.4.href"></a>
+                </p>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="project5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="projects.4.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-responsive" src="img/freeCodeIng.png">
+                            <p data-i18n="projects.4.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row blur">
+            <div class="col-sm-12">
+                <h2 data-i18n="ProjectsTitle.udacity"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 blur">
+                <img src="img/udacity-resume.png" class="img-responsive href" data-toggle="modal" data-target="#project6">
+                <h3 data-i18n="projects.5.title"></h3>
+                <a class="btn btn-show btn-sm" href="https://gowaa13.github.io/udacity-resume" data-i18n="projects.5.href"></a>
+                <a class="btn btn-show btn-sm" href="https://github.com/gowaa13/udacity-resume" data-i18n="ProjectsTitle.github"></a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="project6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="projects.5.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-responsive" src="img/udacity-resume.png">
+                            <p data-i18n="projects.5.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 blur">
+                <img src="img/udacity-game.png" class="img-responsive href" data-toggle="modal" data-target="#project7">
+                <h3 data-i18n="projects.6.title"></h3>
+                <a class="btn btn-show btn-sm" href="https://gowaa13.github.io/udacity-game" data-i18n="projects.6.href"></a>
+                <a class="btn btn-show btn-sm" href="https://github.com/gowaa13/udacity-game" data-i18n="ProjectsTitle.github"></a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="project7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="projects.6.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-responsive" src="img/udacity-game.png">
+                            <p data-i18n="projects.6.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 blur">
+                <img src="img/rwd.png" class="img-responsive href" data-toggle="modal" data-target="#project8">
+                <h3 data-i18n="projects.7.title"></h3>
+                <a class="btn btn-show btn-sm" href="https://gowaa13.github.io/udacity-rwd" data-i18n="projects.7.href"></a>
+                <a class="btn btn-show btn-sm" href="https://github.com/gowaa13/udacity-rwd" data-i18n="ProjectsTitle.github"></a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="project8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="projects.7.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-responsive" src="img/rwd.png">
+                            <p data-i18n="projects.7.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <div class="gotop none" title="回最上頁">˄</div>
+    <footer class="text-center blur">
+        o_o &copy; Rex H. No All Rights Reserved!
+    </footer>
+</body>
+
+</html>
