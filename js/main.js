@@ -19,3 +19,5 @@ $(document).ready(function(){
     $("[rel='tooltip']").tooltip({title:" ヽ(ﾟ∀。)ノ ヽ(`Д´#)ﾉ",animation: true,placement: "right"}); 
    
 });
+
+

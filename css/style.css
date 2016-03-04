@@ -116,6 +116,7 @@ a:hover {
     margin-top: 1em;
 }
 
+
 .gotop {
     display: none;
     position: fixed;
@@ -147,10 +148,19 @@ body.modal-open .blur {
     -ms-filter: blur(3px) contrast(.8) brightness(.8);
     filter: blur(3px) contrast(.8) brightness(.8);
 }
+ .fade {
+   opacity: 0;
+   -webkit-transition: opacity 1.25s linear;
+      -moz-transition: opacity 1.25s linear;
+       -ms-transition: opacity 1.25s linear;
+        -o-transition: opacity 1.25s linear;
+           transition: opacity 1.25s linear;
+ }
 
 body.modal-open .none {
     display: none;
     background: none;
+    font-size: none;
 }
 /*tooltip*/
 .tooltip {
@@ -226,7 +236,7 @@ body.modal-open .none {
 
 /*RWD*/
 @media only screen and (max-width: 769px) {
-    .title-logo {
+    .title-logo,.banner {
         display: none;
     }
 }
