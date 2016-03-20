@@ -50,9 +50,9 @@ var resources = {
                 "title": "響應式網頁",
                 "href": "線上演示",
                 "about": "關於響應式網頁",
-                "content": "這個響應式部落格網頁是由udacity課程Response Images與RWD兩個課程介紹，主要是RWD的作業，在這裡我學會使用grunt以及如何將圖片更有效利用與最佳化"                
+                "content": "這個響應式部落格網頁是由udacity課程Response Images與RWD兩個課程介紹，主要是RWD的作業，在這裡我學會使用grunt以及如何將圖片更有效利用與最佳化。不過主要只有圖片最佳化。"                
             }],
-            "titleTrans": {"fun":"你媽知道你在這當廢人嗎?","work":"Do You Best!"},
+            "titleTrans": {"fun":"你媽知道你在這當廢人嗎? Q_Q/可惡 0rz!","work":"Do You Best!"},
             "valueTrans": "值"
         }
     },
