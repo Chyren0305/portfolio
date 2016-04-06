@@ -2,7 +2,7 @@ var resources = {
     "tw": {
         "translation": {
             "title": "我的作品集",
-            "name": "咪嚕得碰",
+            "name": "黃聖元",
             "job": "前端工程師",
             "ProjectsTitle": { "title": "作品", "online": "線上作業", "udacity": "線上課程作品","github":"GitHub" },
             "option": {
