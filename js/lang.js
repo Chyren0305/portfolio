@@ -13,19 +13,19 @@ var resources = {
                 "title": "資策會個人作品",
                 "href": "山貓美式餐廳",
                 "about": "這是在資策會第一個作品",
-                "content": "此作品是我正式學會何謂HTML5與CSS3，也第一次聽聞JQuery這個library!這並不是個好作品，但總是第一個完成的就當作紀念..."
+                "content": "此作品是我正式學會何謂HTML5與CSS3，也第一次聽聞JQuery這個library!可能對專家來說，這並不是個好作品，但對初學者來說，這是本人第一個完成的作品。"
 
             }, {
                 "title": "資策會團體專題",
                 "href": "走吧~旅行社!",
                 "about": "關於日本自助遊專題網站",
-                "content": "這個專題為使每個人都會負責前端跟後端部份，各分配一部份給人做，再將需配合的部份與其組員互相配合。我是負責旅遊分享的部份。"
+                "content": "這個專題為使每個人都會負責前端跟後端部份，各分配一部份給人做，最初資料庫規規畫與各個使用者設計流程討論完，再將依分配的部份與其各自組員互相配合。我是負責旅遊分享的部份與後端資料的部份。"
 
             }, {
                 "title": "版本控制系統",
                 "href": "我個人的GitHub",
                 "about": "關於Git與GitHub",
-                "content": "進資策會前，曾到過github的網站，那時並不清楚是做什麼用的，直到資策會的友人告訴我後，才漸漸認真學這個。之後兼職專案，也有用到這個，算是惠我良多。"
+                "content": "進資策會前，曾到過github的網站，那時並不清楚是做什麼用的，直到資策會的友人告訴我後，才漸漸認真學這個。之後專案工作，也有用到這個，算是惠我良多。"
             },{
                 "title": "Codecademy",
                 "href": "我的codecademy學習歷程",
@@ -52,7 +52,6 @@ var resources = {
                 "about": "關於響應式網頁",
                 "content": "這個響應式部落格網頁是由udacity課程Response Images與RWD兩個課程介紹，主要是RWD的作業，在這裡我學會使用grunt以及如何將圖片更有效利用與最佳化。不過主要只有圖片最佳化。"                
             }],
-            "titleTrans": {"fun":"你媽知道你在這當廢人嗎? Q_Q/可惡 0rz!","work":"Do You Best!"},
             "valueTrans": "值"
         }
     },
@@ -108,7 +107,6 @@ var resources = {
                 "about": "this is my FreeCodeCamp homework solution",
                 "content": "In this online course I learned Response Website design basic concepts"                
             }],
-            "titleTrans":{"fun":"Fixed your shit! por favor!","work":"Do You Best!"},
             "valueTrans": "value"
         }
     }
