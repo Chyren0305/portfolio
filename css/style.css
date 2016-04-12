@@ -108,7 +108,9 @@ a:hover {
 .href {
     cursor: pointer;
 }
-
+.href:hover{
+	opacity: .8;
+}
 
 /*body*/
 
