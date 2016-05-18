@@ -4,7 +4,7 @@ var resources = {
             "title": "我的作品集",
             "name": "黃聖元",
             "job": "前端工程師",
-            "ProjectsTitle": { "title": "作品", "online": "線上作業", "udacity": "線上課程作品","github":"GitHub" },
+            "ProjectsTitle": { "title": "作品", "online": "線上作業", "udacity": "線上課程作品","github":"GitHub" ,"demo":"一些作品"},
             "option": {
                 "open": "開啟",
                 "close": "關閉"
@@ -43,6 +43,21 @@ var resources = {
                 "content": "這個互動履歷目前只有英文版，它是由udacity課程Javascript Basics裡的作業教學，所完成的一個專案。"                
             },{
                 "title": "青蛙過河小遊戲",
+                "href": "線上演示",
+                "about": "關於小遊戲",
+                "content": "這個HTML5的青蛙過小遊戲是由udacity課程object oriented javascript裡教學做出來的，在這裡我學會了canvas與一些簡單的設計模式。此遊戲只能在電腦上玩。"                
+            },{
+                "title": "響應式網頁",
+                "href": "線上演示",
+                "about": "關於響應式網頁",
+                "content": "這個響應式部落格網頁是由udacity課程Response Images與RWD兩個課程介紹，主要是RWD的作業，在這裡我學會使用grunt以及如何將圖片更有效利用與最佳化。不過主要只有圖片最佳化。"                
+            },{
+                "title": "範例",
+                "href": "",
+                "about": "關於互動履歷",
+                "content": "這個互動履歷目前只有英文版，它是由udacity課程Javascript Basics裡的作業教學，所完成的一個專案。"                
+            },{
+                "title": "",
                 "href": "線上演示",
                 "about": "關於小遊戲",
                 "content": "這個HTML5的青蛙過小遊戲是由udacity課程object oriented javascript裡教學做出來的，在這裡我學會了canvas與一些簡單的設計模式。此遊戲只能在電腦上玩。"                
