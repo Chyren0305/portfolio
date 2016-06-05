@@ -240,7 +240,15 @@ body.modal-open .none {
 
 /*RWD*/
 @media only screen and (max-width: 769px) {
-    .title-logo,.banner {
+    .banner,.text-title{
         display: none;
     }
+
 }
+    
+@media only screen and (max-width: 450px) {
+    footer{
+       font-size: smaller;
+    }
+
+}    
