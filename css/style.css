@@ -113,7 +113,9 @@ a:hover {
 }
 
 /*body*/
-
+.job{
+    height: 100px;
+}
 .modal-body p {
     margin-top: 1em;
 }

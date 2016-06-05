@@ -16,7 +16,7 @@ $(document).ready(function(){
     
     //tooltip
 
-    $("[rel='tooltip']").tooltip({title:" ヽ(ﾟ∀。)ノ ヽ(`Д´#)ﾉ",animation: true,placement: "right"}); 
+    $("[rel='tooltip']").tooltip({title:" ヽ（'Д`）人（'Д`）人（'Д`）ノ ",animation: true,placement: "right"}); 
    
 });
 

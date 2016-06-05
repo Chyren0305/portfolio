@@ -1,9 +1,9 @@
 var resources = {
     "tw": {
         "translation": {
-            "title": "我的作品集",
-            "name": "黃聖元",
-            "job": "前端工程師",
+            "title": "作品",
+            "name": "",
+            "job": "懺悔幾時，拎劍揮沉，不省風波染一身<br/> 玩物喪志，無地埋根，人生何處不留恨",
             "ProjectsTitle": { "title": "作品", "online": "線上作業", "udacity": "線上課程作品","github":"GitHub" ,"demo":"一些作品"},
             "option": {
                 "open": "開啟",
@@ -45,27 +45,27 @@ var resources = {
                 "title": "青蛙過河小遊戲",
                 "href": "線上演示",
                 "about": "關於小遊戲",
-                "content": "這個HTML5的青蛙過小遊戲是由udacity課程object oriented javascript裡教學做出來的，在這裡我學會了canvas與一些簡單的設計模式。此遊戲只能在電腦上玩。"                
+                "content": "這個HTML5的青蛙過小遊戲是由udacity課程object oriented javascript裡教學做出來的，在這裡我學會了canvas與一些簡單的設計模式。此遊戲只能在電腦上玩。按鍵盤上下鍵。"                
             },{
                 "title": "響應式網頁",
                 "href": "線上演示",
                 "about": "關於響應式網頁",
                 "content": "這個響應式部落格網頁是由udacity課程Response Images與RWD兩個課程介紹，主要是RWD的作業，在這裡我學會使用grunt以及如何將圖片更有效利用與最佳化。不過主要只有圖片最佳化。"                
             },{
-                "title": "範例",
-                "href": "",
-                "about": "關於互動履歷",
-                "content": "這個互動履歷目前只有英文版，它是由udacity課程Javascript Basics裡的作業教學，所完成的一個專案。"                
-            },{
-                "title": "",
+                "title": "樂心牙醫",
                 "href": "線上演示",
-                "about": "關於小遊戲",
-                "content": "這個HTML5的青蛙過小遊戲是由udacity課程object oriented javascript裡教學做出來的，在這裡我學會了canvas與一些簡單的設計模式。此遊戲只能在電腦上玩。"                
+                "about": "關於這個網站",
+                "content": ""                
             },{
-                "title": "響應式網頁",
+                "title": "自己做的一些demo",
+                "href": "線上演示",
+                "about": "關於這些demo",
+                "content": ""                
+            },{
+                "title": "足球筆記",
                 "href": "線上演示",
                 "about": "關於響應式網頁",
-                "content": "這個響應式部落格網頁是由udacity課程Response Images與RWD兩個課程介紹，主要是RWD的作業，在這裡我學會使用grunt以及如何將圖片更有效利用與最佳化。不過主要只有圖片最佳化。"                
+                "content": ""                
             }],
             "valueTrans": "值"
         }
@@ -73,7 +73,7 @@ var resources = {
     "en": {
         "translation": {
             "title": "My Portfolio",
-            "name": "Rex Huang",
+            "name": "Chyren Huang",
             "job": "Front-end Ninja",
             "ProjectsTitle": { "title": "portfolio", "online": "OnlineCourse Homework","udacity": "OnlineCourse Projects" },
             "option": {
