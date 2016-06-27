@@ -3,7 +3,7 @@ var resources = {
         "translation": {
             "title": "作品",
             "name": "",
-            "job": "懺悔幾時，拎劍揮沉，不省風波染一身<br/> 玩物喪志，無地埋根，人生何處不留恨",
+            "job": "流水下山非有意，片雲歸洞本無心；<br/>人生若得如雲水，鐵樹開花遍界春。",
             "ProjectsTitle": { "title": "作品", "online": "線上作業", "udacity": "線上課程作品","github":"GitHub" ,"demo":"一些作品"},
             "option": {
                 "open": "開啟",
