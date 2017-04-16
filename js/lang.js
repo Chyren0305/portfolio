@@ -1,5 +1,5 @@
 var resources = {
-    "tw": {
+    "zh_TW": {
         "translation": {
             "title": "作品",
             "name": "",
@@ -129,9 +129,9 @@ var resources = {
 
 $(document).ready(function() {
     i18n.init({
-        "lng": 'tw',
+        "lng": 'zh_TW',
         "resStore": resources,
-        "fallbackLng": 'tw'
+        "fallbackLng": 'zh_TW'
     }, function(t) {
         $(document).i18n();
     });
