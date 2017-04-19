@@ -194,7 +194,7 @@ function languageInit(lang) {
 function DemoTemplate() {
     //Demo
 
-    $.getJSON("contact.json", function(data) {
+    $.getJSON("js/contact.json", function(data) {
 
 
         var infoHtml = '';
