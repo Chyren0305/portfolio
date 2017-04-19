@@ -1,9 +1,19 @@
-/*main*/
+    /*main*/
 
 body {
     font-family: 'Arimo', 'Microsoft JhengHei', sans-serif;
-    color:#CC7704;
+    color: #CC7704;
     font-weight: 300;
+}
+.h2, h2 {
+    font-size: 1.8rem;
+}
+.h4, h4 {
+    font-size: 1.2rem;
+    margin: .2em;
+}
+p{
+    color: #333;
 }
 
 img {
@@ -17,6 +27,8 @@ img.img-responsive {
 
 button {
     margin: .5em;
+    box-shadow: 1px 1px 1px #333;
+    cursor: pointer;
 }
 
 button:focus {
@@ -24,13 +36,18 @@ button:focus {
     border: none;
 }
 
-a ,a:hover,a:active,a:focus,a:visited{
-    
+a,
+a:hover,
+a:active,
+a:focus,
+a:visited {
     text-decoration: none;
 }
-a{
+
+a {
     color: #699;
 }
+
 a:hover {
     color: #FF7800;
 }
@@ -40,11 +57,14 @@ a:hover {
 
 .row {
     margin-bottom: .2em;
+    width: 100%;
 }
+
+
 
 .col-sm-4,
 .col-sm-6 {
-    margin-bottom: .5em;
+    margin-bottom: 1.2em;
 }
 
 
@@ -54,6 +74,7 @@ a:hover {
     margin: .5em;
     background-color: #FF7800;
     color: #fff;
+    box-shadow: 1px 1px 2px #333;
 }
 
 .btn-show:hover,
@@ -67,12 +88,16 @@ a:hover {
     width: 100%;
     display: block;
     height: 50px;
+
 }
 
 .btn-main {
     width: 90px;
     height: 35px;
     display: block;
+    line-height: 1rem;
+    padding: .1em; 
+    font-family: inherit;       
 }
 
 .btn-main:focus,
@@ -108,18 +133,24 @@ a:hover {
 .href {
     cursor: pointer;
 }
-.href:hover{
-	opacity: .8;
+
+.href:hover {
+    opacity: .8;
 }
 
-/*body*/
-.job{
+
+/*body framework*/
+.banner {
+    margin-bottom: 1.5rem;
+}
+
+.job {
     height: 100px;
 }
-.modal-body p {
-    margin-top: 1em;
-}
 
+.modal-body p {
+    padding: .5rem;
+}
 
 .gotop {
     display: none;
@@ -145,6 +176,9 @@ footer {
 
 /*effect*/
 
+body.modal-open {
+    overflow: visible;
+}
 body.modal-open .blur {
     -webkit-filter: blur(3px) contrast(.8) brightness(.8);
     -moz-filter: blur(3px) contrast(.8) brightness(.8);
@@ -152,21 +186,25 @@ body.modal-open .blur {
     -ms-filter: blur(3px) contrast(.8) brightness(.8);
     filter: blur(3px) contrast(.8) brightness(.8);
 }
- .fade {
-   opacity: 0;
-   -webkit-transition: opacity 1.25s linear;
-      -moz-transition: opacity 1.25s linear;
-       -ms-transition: opacity 1.25s linear;
-        -o-transition: opacity 1.25s linear;
-           transition: opacity 1.25s linear;
- }
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 1.25s linear;
+    -moz-transition: opacity 1.25s linear;
+    -ms-transition: opacity 1.25s linear;
+    -o-transition: opacity 1.25s linear;
+    transition: opacity 1.25s linear;
+}
 
 body.modal-open .none {
     display: none;
     background: none;
     font-size: none;
 }
+
+
 /*tooltip*/
+
 .tooltip {
     position: absolute;
     width: 180px;
@@ -175,10 +213,10 @@ body.modal-open .none {
     background-color: #fff;
     color: #fff;
     text-align: center;
-    padding:.1em .2em; 
+    padding: .1em .2em;
     z-index: 1;
     top: 100%;
-    left:100%;
+    left: 100%;
 }
 
 .tooltip::after {
@@ -190,65 +228,135 @@ body.modal-open .none {
 }
 
 .tooltip.right .tooltip-arrow {
-  top: 50%;
-  left: 0;
-  margin-top: -5px;
-  border-width: 0;
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    border-width: 0;
 }
+
 .tooltip.right .tooltip-arrow:before {
-    border-color:transparent #000 transparent transparent; 
-    border-style:solid; 
-    border-width: 5px 5px  5px 5px; 
+    border-color: transparent #000 transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 5px 5px;
     right: -5px;
-
     /* 必須指定，才能顯示內容 */
     content: '';
-
     height: 0px;
- 
-
     /* 必須指定，否則會變梯形 */
     position: absolute;
-
     width: 0px;
 }
+
 .tooltip.right .tooltip-arrow:after {
-    border-color:transparent #fff transparent transparent; 
-    border-style: solid solid; 
-    border-width: 5px; 
+    border-color: transparent #fff transparent transparent;
+    border-style: solid solid;
+    border-width: 5px;
     right: -7px;
-
     /* 必須指定，才能顯示內容 */
     content: '';
-
     height: 0px;
-
-
     /* 必須指定，否則會變梯形 */
     position: absolute;
-
     width: 0px;
 }
+
 .tooltip-inner {
-  width: 180px;  
-  height: 50px;  
-  color: #000;
-  background: #fff;
-  border: solid 1px #333;
-  border-radius: .8em;
+    min-width: 30em;
+    height: 3rem;
+    color: #000;
+    background: #fff;
+    border: solid 1px #333;
+    border-radius: .8em;
 }
+
+
+/*menu*/
+
+.phone-bar {
+    color: #CC7704;
+    font-size: 1.5em;
+    width: 2em;
+    height: 2em;
+    border: 1px solid #CC7704;
+    line-height: 2.2em;
+    text-align: center;
+    margin-top: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__list-s {
+    display: none;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+}
+
+
+li {
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
 
 /*RWD*/
+
 @media only screen and (max-width: 769px) {
-    .banner,.text-title{
+    .row {
+        width: 95vw;
+    }
+
+    li {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+
+    .banner,
+    .text-title h1,
+    .text-title h3 {
         display: none;
     }
 
-}
-    
-@media only screen and (max-width: 450px) {
-    footer{
-       font-size: smaller;
+    /*menu*/
+    ul.menu__list {
+        display: none !important;
     }
+    .phone-bar {
+        font-size: 1.2em;
+        float:right;
+        display: block;
+        margin-top: 60px;
+    }  
+    .menu__list-s {
+        position: relative;
+        margin-top: 120px;
+    }    
 
 }    
+    @media only screen and (max-width: 450px) {
+    .row {
+        width: 99vw;
+    }        
+    .phone-bar {
+        font-size: 1.2em;
+        float:right;
+        display: block;
+        margin-top: -50px; /*由於上面的東西被隱藏 很空 所以這個漢堡包往上一點*/
+    }
+    .menu__list-s {
+        position: relative;
+        margin-top: 0;
+    }             
+    footer {
+        font-size: smaller;
+    }
+    
+    .tooltip-inner {
+        min-height: 50px;
+    }    
+
+    }
