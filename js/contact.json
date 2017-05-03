@@ -16,11 +16,27 @@
     },
     "2":{
     	"name":"gitHub",    	
-        "href": "http://github.com/chyren0305",
+        "href": "https://github.com/chyren0305",
         "mainImg":"img/Cat03.jpg",               
         "img": "img/github.png"
 
 
-    }
+    },
+    "3":{
+        "name":"voteBar",        
+        "href": "https://chyren0305.pythonanywhere.com/poll/1",
+        "mainImg":"img/votebarsite.png",               
+        "img": "img/votebarsite.png"
+
+
+    },
+    "4":{
+        "name":"線上直播",        
+        "href": "https://raylivetv.herokuapp.com/news/0/",
+        "mainImg":"img/liveTVsite.png",               
+        "img": "img/liveTVsite.png"
+
+
+    }    
   
 }

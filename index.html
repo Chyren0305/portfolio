@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charse="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META NAME="ROBOTS" CONTENT="NOINDEX,FOLLOW">
     <title data-i18n="title">My Portfolio</title>
     <!-- <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="path/to/mystylesheet.css"></noscript> -->
-    
-
 </head>
+<!-- 這是一個非常混亂的作品 -0- -->
 
 <body>
     <header class="lang blur">
@@ -20,7 +20,7 @@
     <main class="container">
         <div class="row blur">
             <div class="col-sm-4">
-                <img class="title-logo" src="img/YellowCircle.png" alt="logo" rel='tooltip' width="100" height="100">
+                <a href=""><img class="title-logo" src="img/YellowCircle.png" alt="logo" rel='tooltip' width="100" height="100"></a>
                 <!-- data-i18n="[title]titleTrans.fun" not working  0rz -->
             </div>
             <div class="col-sm-8  text-right text-uppercase text-title">
@@ -35,8 +35,7 @@
                             <a href="#projects" class="menu__link anchor" data-i18n="menu.1">作品</a>
                         </li>
                         <li class="menu__item Quiz">
-                            <a href="#QuizBanks
-" class="menu__link anchor" data-i18n="menu.2">題庫</a>
+                            <a href="#QuizBanks" class="menu__link anchor" data-i18n="menu.2">題庫</a>
                         </li>
                         <li class="menu__item Demos">
                             <a href="#otherDemos" class="menu__link anchor" data-i18n="menu.3">演示</a>
@@ -60,9 +59,10 @@
         </div>
         <!-- 關於我  -->
         <div id="about">
-            <h2>關於這個人</h2>
-            <p>
-                我曾想過...
+            <h2 data-i18n="ProjectsTitle.aboutme">關於我</h2>
+            <p id="aboutMe">
+                {{ message }} 出生於新竹市，成長於苗栗頭份，大學唸的是機械系，興趣廣泛，喜好運動與聽故事的客家人！
+                <a href="http://140.115.236.72/demo-personal/YD802/web/C1400155/code/demo/GoogleMap_Me.html" target="_blank">那兒</a>有我兒時住的地方，平常也愛看布袋戲！
             </p>
         </div>
         <!-- banner -->
@@ -141,8 +141,7 @@
                 </div>
             </div>
         </div>
-
-
+        <!-- 這裡用了vue.js owo -->
         <!-- 小型demo -->
         <div class="row blur" id="otherDemos">
             <div class="col-sm-12">
@@ -150,85 +149,66 @@
             </div>
         </div>
         <!-- 專案小遊戲 -->
-        <div class="row">
-            <div class="col-sm-4 blur">
-                <img src="img/udacity-resume.png" class="img-responsive href" data-toggle="modal" data-target="#otherDemos0">
-                <h4 data-i18n="otherDemos.0.title"></h4>
-                <a class="btn btn-show btn-sm" href="../udacity-resume" data-i18n="otherDemos.0.href"></a>
-                <a class="btn btn-show btn-sm" href="https://github.com/chyren0305/udacity-resume" data-i18n="ProjectsTitle.github"></a>
-            </div>
-            <!-- Modal  5 resume-->
-            <div class="modal fade" id="otherDemos0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel" data-i18n="otherDemos.0.about"></h4>
-                        </div>
-                        <div class="modal-body">
-                            <a href="udacity-resume">
-                                <img class="img-responsive" src="img/udacity-resume.png">
-                            </a>
-                            <p data-i18n="otherDemos.0.content"></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+        <div class="row" id="apptest">
+            <template v-for="item in bios">
+                <div class="col-sm-4 blur">
+                    <img v-bind:src="item.image" class="img-responsive href" data-toggle="modal" :data-target="item.target">
+                    <h4 v-bind:data-i18n="'otherDemos.' + item.num + '.title'">微專案</h4>
+                    <a class="btn btn-show btn-sm" v-bind:href="item.url" target="_blank" :data-i18n="'otherDemos.' + item.num + '.href'">線上演示</a>
+                    <a class="btn btn-show btn-sm" v-bind:href="item.source" target="_blank" :data-i18n="item.sourceHref">程式碼</a>
+                </div>
+                <!-- Modal  5 resume-->
+                <div class="modal fade" v-bind:id=" 'otherDemos' + item.num" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel" :data-i18n="'otherDemos.' + item.num + '.about'"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <a v-bind:href="item.url" target="_blank">
+                                    <img class="img-responsive" v-bind:src="item.image">
+                                </a>
+                                <p :data-i18n="'otherDemos.' + item.num + '.content'"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" :data-i18n="item.close"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-4 blur">
-                <img src="img/udacity-game.png" class="img-responsive href" data-toggle="modal" data-target="#otherDemos1">
-                <h4 data-i18n="otherDemos.1.title"></h4>
-                <a class="btn btn-show btn-sm" href="../udacity-game" data-i18n="otherDemos.1.href"></a>
-                <a class="btn btn-show btn-sm" href="https://github.com/chyren0305/udacity-game" data-i18n="ProjectsTitle.github"></a>
-            </div>
-            <!-- Modal 6 game -->
-            <div class="modal fade" id="otherDemos1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel" data-i18n="otherDemos.1.about"></h4>
-                        </div>
-                        <div class="modal-body">
-                            <a href="udacity-game">
-                                <img class="img-responsive" src="img/udacity-game.png">
-                            </a>
-                            <p data-i18n="otherDemos.1.content"></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 blur">
-                <img src="img/rwd.png" class="img-responsive href" data-toggle="modal" data-target="#otherDemos2">
-                <h4 data-i18n="otherDemos.2.title"></h4>
-                <a class="btn btn-show btn-sm" href="udacity-rwd" data-i18n="otherDemos.2.href"></a>
-                <a class="btn btn-show btn-sm" href="https://github.com/chyren0305/udacity-rwd" data-i18n="ProjectsTitle.github"></a>
-            </div>
-            <!-- Modal  7 rwd blog-->
-            <div class="modal" id="otherDemos2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel" data-i18n="otherDemos.2.about"></h4>
-                        </div>
-                        <div class="modal-body">
-                            <a href="udacity-rwd">
-                                <img class="img-responsive" src="img/rwd.png">
-                            </a>
-                            <p data-i18n="otherDemos.2.content"></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
-                        </div>
-                    </div>
-                </div>
+            </template>
+        </div>
+        <div class="row blur" id="contact">
+            <div class="col-sm-12">
+                <h2 data-i18n="ProjectsTitle.contact">聯絡我</h2>
             </div>
         </div>
-        </div>
-        <div id="contact" height="500px">聯絡我</div>
+        <form>
+            <div class="form-group">
+                <label for="example-text-input" class="col-4 col-form-label">姓名</label>
+                <div class="col-12">
+                    <input class="form-control" type="text" placeholder="Artisanal kale" id="example-text-input">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="example-email-input" class="col-4 col-form-label">電子郵件</label>
+                <div class="col-12">
+                    <input class="form-control" type="email" placeholder="bootstrap@example.com" id="example-email-input">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="example-tel-input" class="col-4 col-form-label">電話</label>
+                <div class="col-12">
+                    <input class="form-control" type="tel" placeholder="0956-956-956" id="example-tel-input">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleTextarea" class="col-4 col-form-label">留言</label>
+                <div class="col-12">
+                    <textarea class="form-control" id="exampleTextarea" rows="20" placeholder="這裡留言"></textarea>
+                </div>
+            </div>    
+        </form>
     </main>
     <div class="gotop none" title="回最上頁">˄</div>
     <footer class="text-center blur">
@@ -237,37 +217,18 @@
 </body>
 <!-- css -->
 <link rel="stylesheet" href="css/reset.css">
-
-
-
-
-
 <link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic' rel='stylesheet' type='text/css' async>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-<script type="text/javascript"  src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-
-
-
 <script type="text/javascript" src="js/i18next.min.js"></script>
-
 <link rel="stylesheet" href="css/style.css" async>
 <link rel="stylesheet" href="css/menu.css" async>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js"></script>
+<script type="text/javascript" src="js/vueTemplate.js" async defer></script>
 <script type="text/javascript" src="js/lang.js" async defer></script>
-
 <script type="text/javascript" src="js/main.js" async defer></script>
-
-
-<!-- <script type="text/javascript" src="js/template.js"></script> -->
-
-
-    
-
-
 
 </html>

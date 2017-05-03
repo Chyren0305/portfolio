@@ -5,7 +5,15 @@ var resources = {
             "name": "",
             "job": "流水下山非有意，片雲歸洞本無心；<br/>人生若得如雲水，鐵樹開花遍界春。",
             "menu": ["關於我", "作品集", "題庫本", "微專案", "聯絡我"],
-            "ProjectsTitle": { "title": "作品", "online": "題庫本", "udacity": "微專案", "github": "GitHub", "demo": "一些作品" },
+            "ProjectsTitle": { 
+                            "aboutme":"關於我",
+                            "title": "作品", 
+                            "online": "題庫本", 
+                            "udacity": "微專案",
+                            "contact":"聯絡我", 
+                            "github": "GitHub",
+                            "codepen":"codepen", 
+                            "demo": "一些作品" },
             "option": {
                 "open": "開啟",
                 "close": "關閉"
@@ -32,9 +40,14 @@ var resources = {
                 "content": "進資策會前，曾到過github的網站，那時並不清楚是做什麼用的，直到資策會的友人告訴我後，才漸漸認真學這個。之後專案工作，也有用到這個，算是惠我良多。"
             }, {
                 "title": "投票網站",
-                "href": "線上演示",
-                "about": "關於這個網站",
-                "content": ""
+                "href": "投票吧",
+                "about": "關於這個投票吧",
+                "content": "這是今年過年完，三月開始練習的投票網站"
+            }, {
+                "title": "線上直播",
+                "href": " Youtube線上直播",
+                "about": "為何要做這",
+                "content": "只是個人私心想把常看的電視頻道方便拿來看而已"
             }, {
                 "title": "樂心牙醫",
                 "href": "線上演示",
@@ -47,6 +60,7 @@ var resources = {
                 "content": ""
             }],
 
+            //demo
             "QuizBanks": [{
                 "title": "Codecademy",
                 "href": "我的codecademy學習歷程",
@@ -74,10 +88,10 @@ var resources = {
                 "about": "關於響應式網頁",
                 "content": "這個響應式部落格網頁是由udacity課程Response Images與RWD兩個課程介紹，主要是RWD的作業，在這裡我學會使用grunt以及如何將圖片更有效利用與最佳化。不過主要只有圖片最佳化。"
             }, {
-                "title": "自己做的一些demo",
+                "title": "計算機",
                 "href": "線上演示",
-                "about": "關於這些demo",
-                "content": ""
+                "about": "關於這個計算機",
+                "content": "這是那個freecodecamp的課程作業，因為做了這個有大致了解計算機原理，雖然不是指電腦的..."
             }],
             "valueTrans": "值"
         }
@@ -88,7 +102,13 @@ var resources = {
             "name": "Chyren Huang",
             "job": "Front-end Ninja",
             "menu": ["About", "Project", "Quiz", "Demo", "Contact"],
-            "ProjectsTitle": { "title": "portfolio", "online": "OnlineCourse Homework", "udacity": "OnlineCourse Projects" },
+            "ProjectsTitle": { 
+                    "aboutme":"About Me",
+                    "title": "portfolio", 
+                    "online": "OnlineCourse Homework", 
+                    "udacity": "OnlineCourse Projects",
+                    "contact":"Contact"  
+                },
             "option": {
                 "open": "open",
                 "close": "close"
@@ -109,7 +129,20 @@ var resources = {
                 "href": "Link to github",
                 "about": "Git and GitHub",
                 "content": " This was my github. :D In 2014 I learned so many about git and github!"
+            },{
+                "title": "VoteBar",
+                "href": "this is a voteSite",
+                "about": "About this VoteBar",
+                "content": "this is an exercise for voteSite"
             }, {
+                "title": "onlineTV",
+                "href": " Youtube live TV",
+                "about": "Why i do this? 0rz!",
+                "content": "just I want to watch TV program on my Computer or SmartPhone"
+            }],
+
+            //Quiz
+            "QuizBanks":[{
                 "title": "Future Codecademy",
                 "href": "link to my codecademy",
                 "about": "My Codecademy Personal Info",
@@ -119,7 +152,10 @@ var resources = {
                 "href": "link to my FreeCodeCamp",
                 "about": "My FreeCodeCamp Homework Solution",
                 "content": "In this online course I learned a lot and decided to be an great Front-end developer"
-            }, {
+            }], 
+
+            //otherDemo
+            "otherDemos":[{
                 "title": "Resume",
                 "href": "Interational Resume",
                 "about": "My Interational Resume",
@@ -134,7 +170,13 @@ var resources = {
                 "href": "Demo",
                 "about": "this is my FreeCodeCamp homework solution",
                 "content": "In this online course I learned Response Website design basic concepts"
+            }, {
+                "title": "caculator",
+                "href": "demo",
+                "about": "about this calculator",
+                "content": "this is  a homework for freecodecamp, cause this i learned  more about Principles of Computer"
             }],
+            
             "valueTrans": "value"
         }
     }
@@ -167,6 +209,8 @@ $(document).ready(function() {
 
 
      
+
+
 
 
 });

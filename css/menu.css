@@ -83,7 +83,7 @@
 .menu--sebastian .menu__link {
     position: relative;
     display: block;
-    margin: 0 .5em;
+    /*margin: 0 .5em;*/
     text-align: center;
     color: #929292;
     -webkit-transition: color 0.4s;

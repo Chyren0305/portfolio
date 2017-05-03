@@ -2,6 +2,8 @@ $(document).ready(function() {
 
 
 
+
+
     // gotop
     $(".gotop").click(function() {
         $("html,body").animate({
@@ -34,11 +36,11 @@ $(document).ready(function() {
 
 
     //錨點
-    $(".container").click(function() {
-        $("html,body").animate({
-            scrollTop: 0
-        }, 1200);
-    });
+    // $(".container").click(function() {
+    //     $("html,body").animate({
+    //         scrollTop: 0
+    //     }, 1200);
+    // });
 
 
     $('.container').on('click', '.anchor', function(event) {
@@ -123,14 +125,17 @@ $(document).ready(function() {
 
 
 
-        //較小畫面時的menu
 
-        $('.phone-bar').click(function() {
-            $('.menu__list-s').slideToggle();
-
-        });
 
 
 
     });
+        //較小畫面時的menu
+
+        $('.phone-bar').click(function() {
+            $('.menu__list-s').toggle('slow');
+
+
+        });
+    
 });
