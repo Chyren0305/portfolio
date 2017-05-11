@@ -4,11 +4,15 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="300000">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <META NAME="ROBOTS" CONTENT="NOINDEX,FOLLOW">
     <title data-i18n="title">My Portfolio</title>
+    <link rel="shortcut icon" href="favicon.ico" />
     <!-- <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="path/to/mystylesheet.css"></noscript> -->
+
 </head>
 <!-- 這是一個非常混亂的作品 -0- -->
 
@@ -58,12 +62,18 @@
             </div>
         </div>
         <!-- 關於我  -->
-        <div id="about">
+        <div id="about" class="aboutMe">
             <h2 data-i18n="ProjectsTitle.aboutme">關於我</h2>
-            <p id="aboutMe">
-                {{ message }} 出生於新竹市，成長於苗栗頭份，大學唸的是機械系，興趣廣泛，喜好運動與聽故事的客家人！
-                <a href="http://140.115.236.72/demo-personal/YD802/web/C1400155/code/demo/GoogleMap_Me.html" target="_blank">那兒</a>有我兒時住的地方，平常也愛看布袋戲！
-            </p>
+
+            <h4 id="welcome"><em><i>{{message}}</i></em></h4>
+            
+            <p id="aboutMe" data-i18n="[html]article.title"></p>
+            <p id="aboutMe" data-i18n="[html]article.begin"></p>
+            <p id="aboutMe" data-i18n="[html]article.middle"></p>
+            <p id="aboutMe" data-i18n="[html]article.end"></p>
+
+
+
         </div>
         <!-- banner -->
         <div class="row blur banner">
@@ -73,24 +83,33 @@
                 <!-- banner -->
             </div>
         </div>
+
         <!-- 作品 -->
         <div class="row blur" id="projects">
             <div class="col-sm-12">
                 <h2 data-i18n="ProjectsTitle.title"></h2>
             </div>
         </div>
-        <!-- 1 個人作品 -->
+        <h4 id="welcome"><em><i>There is No Royal Road to Learning</i></em></h4>
+        
+
+        <!-- 個人作品 -->
         <div class="row" id="allProject">
             <!-- 這裡放個人專案作品 -->
         </div>
-        <!-- 題庫 -->
+
+
+        <!-- 題庫 這樣弄 很煩 後來才有ajax跟html模版的啊 這個區塊只有四個 不會增加 大概... --> 
         <div class="row blur" id="QuizBanks">
             <div class="col-sm-12">
                 <h2 data-i18n="ProjectsTitle.online"></h2>
             </div>
         </div>
+        
+        <h4 id="welcome"><em><i>Variety is the Spice of Life</i></em></h4>
+
         <div class="row">
-            <!-- Modal  codecademy-->
+            <!-- Modal 1 codecademy-->
             <div class="col-sm-6 blur">
                 <h4><a href="https://www.codecademy.com/Coder0305" data-i18n="QuizBanks.0.href"></a></h4>
                 <img src="img/sports.jpg" class="img-responsive href" data-toggle="modal" data-target="#QuizBanks0">
@@ -101,10 +120,10 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel" data-i18n="projects.0.about"></h4>
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="QuizBanks.0.about"></h4>
                         </div>
                         <div class="modal-body">
-                            <a href="https://www.codecademy.com/Coder0305">
+                            <a href="https://www.codecademy.com/Coder0305" target="_blank">
                                 <img class="img-responsive" src="img/CodecademyIng.png">
                             </a>
                             <p data-i18n="QuizBanks.0.content"></p>
@@ -115,21 +134,23 @@
                     </div>
                 </div>
             </div>
-            <!-- freecodecamp -->
+
+
+            <!-- Modal  freecodecamp-->
             <div class="col-sm-6 blur">
                 <h4><a href="https://www.freecodecamp.com/chyren0305" data-i18n="QuizBanks.1.href"></a></h4>
-                <img src="img/freeCodeCamp.png" class="img-responsive href" data-toggle="modal" data-target="#project5">
+                <img src="img/freeCodeCamp.png" class="img-responsive href" data-toggle="modal" data-target="#QuizBanks1">
                 <h4 data-i18n="QuizBanks.1.title"></h4>
             </div>
             <!-- Modal  freecodecamp -->
-            <div class="modal fade" id="project5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="QuizBanks1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title" id="myModalLabel" data-i18n="QuizBanks.1.about"></h4>
                         </div>
                         <div class="modal-body">
-                            <a href="https://www.freecodecamp.com/chyren0305">
+                            <a href="https://www.freecodecamp.com/chyren0305" target="_blank">
                                 <img class="img-responsive" src="img/freeCodeIng.png">
                             </a>
                             <p data-i18n="QuizBanks.1.content"></p>
@@ -140,7 +161,65 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <!-- Modal  paiza-->
+            <div class="col-sm-6 blur">
+                <h4><a href="https://paiza.jp" data-i18n="QuizBanks.2.href"></a></h4>
+                <img src="img/paiza.png" class="img-responsive href" data-toggle="modal" data-target="#QuizBanks2">
+                <h4 data-i18n="QuizBanks.2.title"></h4>
+            </div>
+            <!-- Modal  paiza-->
+            <div class="modal fade" id="QuizBanks2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="QuizBanks.2.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <a href="https://paiza.jp">
+                                <img class="img-responsive" src="img/paiza.png" target="_blank">
+                            </a>
+                            <p data-i18n="QuizBanks.2.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal  paiza-->
+            <div class="col-sm-6 blur">
+                <h4><a href="https://leetcode.com/problemset/algorithms/" data-i18n="QuizBanks.3.href"></a></h4>
+                <img src="img/train.png" class="img-responsive href" data-toggle="modal" data-target="#QuizBanks3">
+                <h4 data-i18n="QuizBanks.3.title"></h4>
+            </div>
+            <!-- Modal  paiza-->
+            <div class="modal fade" id="QuizBanks3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel" data-i18n="QuizBanks.3.about"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <a href="https://leetcode.com/problemset/algorithms/" target="_blank">
+                                <img class="img-responsive" src="img/LeetCode.png">
+                            </a>
+                            <p data-i18n="QuizBanks.3.content"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="option.close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+
+
         </div>
+        
         <!-- 這裡用了vue.js owo -->
         <!-- 小型demo -->
         <div class="row blur" id="otherDemos">
@@ -148,25 +227,32 @@
                 <h2 data-i18n="ProjectsTitle.udacity"></h2>
             </div>
         </div>
-        <!-- 專案小遊戲 -->
+        
+        <h4 id="welcome"><em><i>No pain No Gain</i></em></h4>
+
+        <!-- 專案或小遊戲 -->
         <div class="row" id="apptest">
             <template v-for="item in bios">
                 <div class="col-sm-4 blur">
                     <img v-bind:src="item.image" class="img-responsive href" data-toggle="modal" :data-target="item.target">
-                    <h4 v-bind:data-i18n="'otherDemos.' + item.num + '.title'">微專案</h4>
-                    <a class="btn btn-show btn-sm" v-bind:href="item.url" target="_blank" :data-i18n="'otherDemos.' + item.num + '.href'">線上演示</a>
-                    <a class="btn btn-show btn-sm" v-bind:href="item.source" target="_blank" :data-i18n="item.sourceHref">程式碼</a>
+                    <div class="info href" data-toggle="modal" :data-target="item.target"></div>
+                    <h4 v-bind:data-i18n="'otherDemos.' + item.num + '.title'"></h4>
+                    <a class="btn btn-show btn-sm" v-bind:href="item.url" target="_blank" :data-i18n="'otherDemos.' + item.num + '.href'"></a>
+                    <a class="btn btn-show btn-sm" v-bind:href="item.source" target="_blank" :data-i18n="item.sourceHref"></a>
                 </div>
-                <!-- Modal  5 resume-->
+                <!-- Modal  5 -->
                 <div class="modal fade" v-bind:id=" 'otherDemos' + item.num" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel" :data-i18n="'otherDemos.' + item.num + '.about'">微專案</h4>
+                                <h4 class="modal-title" id="myModalLabel" :data-i18n="'otherDemos.' + item.num + '.about'"></h4>
                             </div>
                             <div class="modal-body">
                                 <a v-bind:href="item.url" target="_blank">
+                                    
                                     <img class="img-responsive" v-bind:src="item.image">
+                                    <div class="info inner"></div>
+                                    
                                 </a>
                                 <p :data-i18n="'otherDemos.' + item.num + '.content'"></p>
                             </div>
@@ -178,46 +264,57 @@
                 </div>
             </template>
         </div>
+        
+        <!-- contact me -->
         <div class="row blur" id="contact">
             <div class="col-sm-12">
                 <h2 data-i18n="ProjectsTitle.contact">聯絡我</h2>
             </div>
         </div>
-        <form>
+        <h4 id="welcome"><em><i>Life is But a Hard and Tortuous Journey </i></em></h4>
+
+        <form action="javascript:completeAndRedirect();">
             <div class="form-group">
-                <label for="example-text-input" class="col-4 col-form-label">姓名</label>
+                <label for="example-text-input" class="col-4 col-form-label" data-i18n="contact.name"></label>
                 <div class="col-12">
-                    <input class="form-control" type="text" placeholder="Artisanal kale" id="example-text-input">
+                    <input class="form-control" type="text" placeholder="Write Your Name" id="example-text-input">
                 </div>
             </div>
             <div class="form-group">
-                <label for="example-email-input" class="col-4 col-form-label">電子郵件</label>
+                <label for="example-email-input" class="col-4 col-form-label" data-i18n="contact.email">電子郵件</label>
                 <div class="col-12">
                     <input class="form-control" type="email" placeholder="bootstrap@example.com" id="example-email-input">
                 </div>
             </div>
             <div class="form-group">
-                <label for="example-tel-input" class="col-4 col-form-label">電話</label>
+                <label for="example-tel-input" class="col-4 col-form-label" data-i18n="contact.phone">電話</label>
                 <div class="col-12">
                     <input class="form-control" type="tel" placeholder="0956-956-956" id="example-tel-input">
                 </div>
             </div>
             <div class="form-group">
-                <label for="exampleTextarea" class="col-4 col-form-label">留言</label>
+                <label for="exampleTextarea" class="col-4 col-form-label" data-i18n="contact.msn">留言</label>
                 <div class="col-12">
-                    <textarea class="form-control" id="exampleTextarea" rows="20" placeholder="這裡留言"></textarea>
+                    <textarea class="form-control" id="exampleTextarea" rows="20" placeholder="Write Message"></textarea>
                 </div>
-            </div>    
+            </div> 
+            <button type="submit" class="btn btn-default"  data-i18n="option.submit"></button> 
+            <button type="reset" class="btn btn-default"  data-i18n="option.reset"></button>   
         </form>
     </main>
-    <div class="gotop none" title="回最上頁">˄</div>
-    <footer class="text-center blur">
-        ◎_◎ &copy; Chyren0305 No All Rights Reserved!
+    <div class="gotop none" title="回最上頁"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+    <footer class="text-center blur footer">
+        <h6> ◎_◎ &copy; Chyren0305 No All Rights Reserved!
+                <a href="https://chyren0305.blogspot.tw/" style="color: #fff" target="_blank">log</a>
+        </h6>
     </footer>
 </body>
+
+
+
 <!-- css -->
 <link rel="stylesheet" href="css/reset.css">
-<link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic' rel='stylesheet' type='text/css' async>
+
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -226,9 +323,15 @@
 <script type="text/javascript" src="js/i18next.min.js"></script>
 <link rel="stylesheet" href="css/style.css" async>
 <link rel="stylesheet" href="css/menu.css" async>
+
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js"></script>
-<script type="text/javascript" src="js/vueTemplate.js" async defer></script>
+
 <script type="text/javascript" src="js/lang.js" async defer></script>
 <script type="text/javascript" src="js/main.js" async defer></script>
+<script type="text/javascript" src="js/vueTemplate.js" async defer></script>
 
+<link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic' rel='stylesheet' type='text/css' defer>
+<!-- 使用這個google font的web font字體...會很lag 最好是有所取括 -->
+<link href="https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css" rel="stylesheet"  defer>
 </html>

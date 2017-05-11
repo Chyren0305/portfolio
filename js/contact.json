@@ -23,7 +23,7 @@
 
     },
     "3":{
-        "name":"voteBar",        
+        "name":"投票吧",        
         "href": "https://chyren0305.pythonanywhere.com/poll/1",
         "mainImg":"img/votebarSite.png",               
         "img": "img/votebarSite.png"
@@ -35,6 +35,14 @@
         "href": "https://raylivetv.herokuapp.com/news/0/",
         "mainImg":"img/liveTVsite.png",               
         "img": "img/liveTVsite.png"
+
+
+    },
+    "5":{
+        "name":"laravel部落格",        
+        "href": "https://laravelblog13.herokuapp.com/post",
+        "mainImg":"img/laravel.png",               
+        "img": "img/laravel.png"
 
 
     }    

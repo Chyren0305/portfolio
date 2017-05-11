@@ -1,5 +1,7 @@
-    /*main*/
+/*使用@import 加入網頁字體 他會很lag...*/
+/*@import url(//fonts.googleapis.com/earlyaccess/cwtexfangsong.css);*/
 
+/*main*/
 body {
     font-family: 'Arimo', 'Microsoft JhengHei', sans-serif;
     color: #CC7704;
@@ -23,6 +25,7 @@ img {
 }
 
 img.img-responsive {
+    position: relative;    
     width: 100vw;
     box-shadow: 2px 2px 3px #333;
 }
@@ -56,6 +59,10 @@ a:hover {
     /*#FF7800;*/
 }
 
+
+ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color:#AAA !important;}
+ input::-moz-placeholder, textarea::-moz-placeholder           {color:#AAA !important;}
+ input::-ms-input-placeholder, textarea::-ms-input-placeholder      {color:#AAA !important;}
 
 /*bootstrap*/
 
@@ -157,17 +164,22 @@ a:hover {
 }
 
 p#aboutMe{
-    padding:1em;
+   padding: .3em 3em 0 .5em;
+   margin-top: .2em;
+   font-family: 'Times', 'cwtexfangsong', 'Ms Mincho', serif;
+   font-size: 1.5em;
+   text-indent: 2em; /*em是相對單位，2em即现在一個字大小的兩倍*/    
 }
+
 
 .gotop {
     display: none;
     position: fixed;
-    right: 15px;
-    bottom: 10px;
-    padding: .5em .8em;
-    font-size: 1.6em;
-    border-radius: .3em;
+    right: .5em;
+    bottom: 1em;
+    padding: .6em .8em;
+    font-size: 1.5em;
+    border-radius: 2em;
     background: rgba(45, 45, 45, .4);
     color: white;
     cursor: pointer;
@@ -181,6 +193,25 @@ footer {
     font-style: italic;
 }
 
+
+
+.info{
+    background: url(../img/info.png);
+    background-size: contain;
+    position: absolute;
+    float: left;
+    top: .5em;
+    right: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+}
+.inner{
+    top: 1.5em;
+}
+.info:hover{
+    background:  url(../img/infoR.png);
+    background-size: contain;
+}
 
 /*effect*/
 
@@ -269,7 +300,7 @@ body.modal-open .none {
 }
 
 .tooltip-inner {
-    min-width: 15em;
+    min-width: 18em;
     height: 3rem;
     color: #000;
     background: #fff;
@@ -297,7 +328,7 @@ body.modal-open .none {
 .menu__list-s {
     display: none;
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 0px;
     text-align: right;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.8);
@@ -395,6 +426,11 @@ li {
     li {
         font-size: 1.2em;
         line-height: 1.5em;
+        margin: .8em;
+        border-bottom: 1px solid #333;
+    }
+    li:hover{
+        border-bottom: 1px solid #d94f5c;   
     }
 
     .banner,

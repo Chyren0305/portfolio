@@ -53,6 +53,7 @@ $(document).ready(function() {
     });
 
 
+    //真是看不懂我弄出的這個- - 0rz 真是深奧啊
 
     //判斷高度
 
@@ -61,12 +62,14 @@ $(document).ready(function() {
     var projectsTop = $('#projects').offset().top;
     var QuizBanksTop = $('#QuizBanks').offset().top;
     var otherDemosTop = $('#otherDemos').offset().top;
-
+    var otherDemosBot = $('#otherDemos').offset().bottom;
+    var contactTop = $('#contact').offset().top;
+    var footerTop = $('.footer').offset().top;
     $(window).scroll(function() {
 
 
         //修正 使用狀態模式
-        if ($(window).scrollTop() >= otherDemosTop) {
+        if ($(window).scrollTop() >= footerTop) {
             $('.menu__item.contact').addClass('menu__item--current');
 
             $('.menu__item.aboutMe').removeClass('menu__item--current');
@@ -74,7 +77,7 @@ $(document).ready(function() {
             $('.menu__item.Quiz').removeClass('menu__item--current');
             $('.menu__item.Demos').removeClass('menu__item--current');
 
-        } else if ($(window).scrollTop() >= QuizBanksTop) {
+        } else if ($(window).scrollTop() >= contactTop) {
             $('.menu__item.Demos').addClass('menu__item--current');
 
             $('.menu__item.aboutMe').removeClass('menu__item--current');
@@ -82,7 +85,7 @@ $(document).ready(function() {
             $('.menu__item.Quiz').removeClass('menu__item--current');
             $('.menu__item.contact').removeClass('menu__item--current');
 
-        } else if ($(window).scrollTop() >= projectsTop) {
+        } else if ($(window).scrollTop() >= QuizBanksTop) {
             $('.menu__item.Quiz').addClass('menu__item--current');
 
 
@@ -130,12 +133,26 @@ $(document).ready(function() {
 
 
     });
-        //較小畫面時的menu
+    //較小畫面時的menu
 
-        $('.phone-bar').click(function() {
-            $('.menu__list-s').toggle('slow');
+    $('.phone-bar').click(function() {
+        $('.menu__list-s').toggle('slow');
 
 
-        });
-    
+    });
+
 });
+
+
+
+
+
+function completeAndRedirect() {
+    alert('What! Don\'t submit whatever the button which you don\'t know!<br/>'+
+        '你為何要送出這個..0rzzz!網路很危險，請小心！若無意外，5秒後，到我的網誌筆記去...');
+
+    setTimeout(function() {
+        location.href = 'https://chyren13.wordpress.com/';
+    }, 5000);
+
+}
