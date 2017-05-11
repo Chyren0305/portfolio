@@ -58,7 +58,7 @@ $(document).ready(function() {
                         num:2,                      
                         target:'#otherDemos2',                      
                         image: 'img/rwd.png',
-                        url: 'udacity-rwd',
+                        url: '../udacity-rwd',
                         source:'https://github.com/chyren0305/udacity-rwd',
                         sourceHref:'ProjectsTitle.github',                      
                         close:'option.close'                        
@@ -88,7 +88,7 @@ $(document).ready(function() {
                         num:5,                      
                         target:'#otherDemos5',                      
                         image: 'img/catClick.png',
-                        url: '../udacity-game',
+                        url: '../catclick',
                         source:'#',
                         sourceHref:'ProjectsTitle.github',                     
                         close:'option.close'                        
@@ -204,7 +204,7 @@ function DemoTemplate() {
 var resources = {
     "zh_TW": {
         "translation": {
-            "title": "ColorFuel",
+            "title": "ColorFuel 五彩燃料~",
             "name": "",
             "job": "流水下山非有意，片雲歸洞本無心；<br/>人生若得如雲水，鐵樹開花遍界春。",
             "menu": ["關於我", "作品集", "題庫本", "微專案", "聯絡我"],
@@ -294,6 +294,11 @@ var resources = {
                 "href": "線上演示",
                 "about": "關於響應式網頁",
                 "content": ""
+            }, {
+                "title": "柚木商城",
+                "href": "線上演示",
+                "about": "關於響應式網頁",
+                "content": "為了練習購物車做的"
             }],
 
             //demo
