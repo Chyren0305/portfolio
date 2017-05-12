@@ -8,12 +8,16 @@ body {
     font-weight: 300;
 }
 .h2, h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 .h4, h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: .2em;
     color: #777;
+}
+
+.h6, h6 {
+    font-size: .8rem;
 }
 p{
     color: #333;
@@ -415,12 +419,16 @@ li {
 
 
 @media only screen and (max-width: 769px) {
+
+    /*main*/
+
+
     .container {
         width: 100%;
 
     }    
     .row {
-        width: 95vw;
+        width: 100vw;
     }
 
     li {
@@ -450,9 +458,20 @@ li {
         margin-top: 60px;
     }  
     .menu__list-s {
+        width: 64vw;
         position: relative;
         margin-top: 120px;
-    }    
+    }
+
+
+    p#aboutMe{
+        padding: .1em;
+    }
+
+    footer, .footer {
+        width: 100vw;
+        text-align: center;
+    }
 
 }    
     @media only screen and (max-width: 450px) {
@@ -464,6 +483,7 @@ li {
         margin-top: -50px; /*由於上面的東西被隱藏 很空 所以這個漢堡包往上一點*/
     }
     .menu__list-s {
+        width: 96vw;
         position: relative;
         margin-top: 0;
     }             
