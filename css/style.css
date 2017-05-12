@@ -38,12 +38,22 @@ button {
     margin: .5em;
     box-shadow: 1px 1px 1px #333;
     cursor: pointer;
+    font-family: inherit; 
+}
+button:hover{
+    background-color: #8CBBBB;
+    color: #EEE;   
 }
 
-button:focus {
+
+button:focus,button:active {
     outline: 0;
     border: none;
+    background-color: #FF7800;
+    color: #fff;    
 }
+
+
 
 a,
 a:hover,
@@ -58,7 +68,7 @@ a {
 }
 
 a:hover {
-    color:#d94f5c;
+    color:#FF7800;
     
     /*#FF7800;*/
 }
@@ -115,16 +125,18 @@ a:hover {
     font-family: inherit;       
 }
 
-.btn-main:focus,
-.btn-main:active {
-    background-color: #23527C;
-    color: #fff;
-}
-
 .btn-main:hover {
     background-color: #8CBBBB;
     color: #EEE;
 }
+
+.btn-main:focus,
+.btn-main:active {
+    background-color: #FF7800;
+    color: #fff;
+}
+
+
 
 
 /*text*/
@@ -189,12 +201,13 @@ p#aboutMe{
     cursor: pointer;
 }
 
-footer {
+footer, .footer {
     width: 100%;
     height: 2em;
     line-height: 2em;
     color: gray;
     font-style: italic;
+    text-align: center;
 }
 
 
@@ -428,13 +441,13 @@ li {
 
     }    
     .row {
-        width: 100vw;
+        margin: 0 auto;
     }
 
     li {
         font-size: 1.2em;
         line-height: 1.5em;
-        margin: .8em;
+        padding: .8em 0 0 .8em;
         border-bottom: 1px solid #333;
     }
     li:hover{
@@ -458,7 +471,6 @@ li {
         margin-top: 60px;
     }  
     .menu__list-s {
-        width: 64vw;
         position: relative;
         margin-top: 120px;
     }
@@ -468,10 +480,6 @@ li {
         padding: .1em;
     }
 
-    footer, .footer {
-        width: 100vw;
-        text-align: center;
-    }
 
 }    
     @media only screen and (max-width: 450px) {
@@ -483,7 +491,6 @@ li {
         margin-top: -50px; /*由於上面的東西被隱藏 很空 所以這個漢堡包往上一點*/
     }
     .menu__list-s {
-        width: 96vw;
         position: relative;
         margin-top: 0;
     }             
